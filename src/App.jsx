@@ -11,13 +11,15 @@ import { GlobalProvider } from "./context/GlobelState";
 const App = () => {
   return (
     <div>
-      <Header />
-      <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <TransctionList />
-        <AddTranscton />
-      </div>
+      <GlobalProvider>
+        <Header />
+        <div className="container">
+          <Balance />
+          <IncomeExpenses />
+          <TransctionList />
+          <AddTranscton />
+        </div>
+      </GlobalProvider>
     </div>
   );
 };
